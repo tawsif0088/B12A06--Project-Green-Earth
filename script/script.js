@@ -5,9 +5,9 @@ const loadCategory = () => {
     .then((data) => displayCategory(data.categories));
 };
 
-const loadTrees = (id) => { 
+const loadTrees = (id) => {
   const url = `https://openapi.programming-hero.com/api/category/${id}`;
-  console.log(id)
+  console.log(id);
   fetch(url)
     .then((res) => res.json())
     .then((data) => displayTrees(data.plants));
@@ -20,20 +20,18 @@ const loadAllTrees = () => {
     .then((data) => displayTrees(data.plants));
 };
 
-const loadTreeDetails = (id) => { 
- const url = `https://openapi.programming-hero.com/api/plant/${id}`;
- fetch(url)
+const loadTreeDetails = (id) => {
+  const url = `https://openapi.programming-hero.com/api/plant/${id}`;
+  fetch(url)
     .then((res) => res.json())
-    .then((data) => displayTreeDetails(data.plant));
+    .then((data) => displayTreeDetails(data.plants));
 };
 
 const displayCategory = (categories) => {
-
   const catContainer = document.getElementById("category-container");
   catContainer.innerHTML = " ";
 
   for (let category of categories) {
-   
     const categoryCard = document.createElement("div");
     categoryCard.innerHTML = `
         <button onclick="loadTrees('${category.id}')" class="btn btn-block btn-category shadow space-y-3 mt-3 px-3 py-2 rounded-md font-medium
@@ -43,7 +41,7 @@ const displayCategory = (categories) => {
               
     `;
     catContainer.appendChild(categoryCard);
-  };
+  }
 };
 
 const displayTrees = (trees) => {
@@ -87,10 +85,10 @@ const displayTrees = (trees) => {
     `;
     treesSection.appendChild(treeCard);
   });
- 
 };
 
 const displayTreeDetails = (plants) => {
+  console.log(plants);
   const detailsContainer = document.getElementById("details-container");
   detailsContainer.innerHTML = `
   <div class="" id="details-container">
@@ -117,9 +115,7 @@ const displayTreeDetails = (plants) => {
         </div>
   `;
   document.getElementById("my_modal_5").showModal();
-
- };
+};
 
 loadCategory();
 loadAllTrees();
-
