@@ -20,7 +20,15 @@ const loadAllTrees = () => {
     .then((data) => displayTrees(data.plants));
 };
 
+const loadTreeDetails = (id) => { 
+ const url = `https://openapi.programming-hero.com/api/plant/${id}`;
+ fetch(url)
+    .then((res) => res.json())
+    .then((data) => displayTreeDetails(data.plant));
+};
+
 const displayCategory = (categories) => {
+
   const catContainer = document.getElementById("category-container");
   catContainer.innerHTML = " ";
 
@@ -45,6 +53,7 @@ const displayTrees = (trees) => {
     const treeCard = document.createElement("div");
     treeCard.innerHTML = `
     <article
+              onclick="loadTreeDetails('${tree.id}')"
                 class="bg-white rounded-2xl shadow-sm p-4 hover:shadow-md transition group flex flex-col h-full"
               >
                 <div class="rounded-xl w-full aspect-[16/11]">
@@ -80,6 +89,36 @@ const displayTrees = (trees) => {
   });
  
 };
+
+const displayTreeDetails = (plants) => {
+  const detailsContainer = document.getElementById("details-container");
+  detailsContainer.innerHTML = `
+  <div class="" id="details-container">
+             <div class="rounded-xl w-full aspect-[16/11]">
+                  <img
+                    class="rounded-xl w-full aspect-[16/11]"
+                    src="${plants.image}"
+                    alt=""
+                  />
+                </div>
+                <div class="mt-3 flex flex-col h-full">
+                  <h4 class="font-semibold text-gray-800">${plants.name}</h4>
+                  <p class="text-sm text-gray-500 mt-1">
+                    ${plants.description}
+                  </p>
+                  <div class="mt-3 flex items-center justify-between">
+                    <span
+                      class="text-xs px-3 py-1 rounded-full bg-emerald-100 text-emerald-700"
+                      >${plants.category}</span
+                    >
+                    <span class="font-semibold text-gray-700">${plants.price}</span>
+                  </div>
+          </div>
+        </div>
+  `;
+  document.getElementById("my_modal_5").showModal();
+
+ };
 
 loadCategory();
 loadAllTrees();
