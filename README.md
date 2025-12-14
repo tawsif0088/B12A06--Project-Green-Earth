@@ -1,93 +1,6 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-006
-
-### 📅 Deadline For 60 marks: 9th September, 2025 (11:59 pm ⏱️)
-
-### 📅 Deadline For 50 marks : 13th September , 2025 (6:00 pm⏱️)
-
-### 📅 Deadline For 30 marks: Any time after 13the September , 2025 (6:01 pm⏱️).
-
----
-# Green Earth
-
-
-## Private Repository: https://classroom.github.com/a/nVZrg5R9 
-
-## Alternative Private Repository: https://classroom.github.com/a/KCGI14ST 
-
-## Alternative Private Repository: https://classroom.github.com/a/JMuIYqgK 
-
-
----
-🌴 API Endpoints
----
-1. Get 🌴All Plants
-```bash
-https://openapi.programming-hero.com/api/plants
-```
-
-2. Get 🌴All categories <br/>
-```bash
-https://openapi.programming-hero.com/api/categories
-```
-
-
-3. Get 🌴plants by categories <br/>
-```bash
-https://openapi.programming-hero.com/api/category/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/category/1
-```
-
-4. Get 🌴Plants Detail <br/>
-
-```bash
-https://openapi.programming-hero.com/api/plant/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/plant/1
-```
----
-
-
-
-
-## ✅ Main Requirements 
-
-#### 1) Navbar
-
-- Website **logo/name** on the **left**  
-- **Menu items** in the **center** 
-- **Plant a Tree button** on the **right** 
-
-#### 2) Banner 
-- A **background image**  
-- A **title** and **subtitle**  
-- A **centered button**  
-
-#### 3) About Campaign
-- **Section heading**  
-- **Image on the left**, **text on the right**  
-
-#### 4) Our Impact Section 
-- Show **3 cards** with campaign **statistics**  
-
-#### 5) Plant a Tree Today Section & Footer
-- **Form**: Name, Email, Number of Trees  
-- **Footer** with copyright info 
-
-#### 6) Responsiveness 
-- Website must be **mobile responsive**  
-
----
-#### 7) Create a README file to answer the following question-
-
-
 #### 1) What is the difference between var, let, and const?
 
-#### 2) What is the difference between map(), forEach(), and filter()? 
+#### 2) What is the difference between map(), forEach(), and filter()?
 
 #### 3) What are arrow functions in ES6?
 
@@ -95,75 +8,13 @@ https://openapi.programming-hero.com/api/plant/1
 
 #### 5) Explain template literals in ES6. How are they different from string concatenation?
 
-## ⚙️ Functionalities 
+1. var একটি পুরানো কিওয়ার্ড। এটি একটি ফাংশনের ভিতরে ডিক্লেয়ার করলে সেটার ভিতরেই access করা যায়। এবং এটি একবার এই ডিক্লেয়ার করা যায়। let এবং const ব্লক-লেভেল স্কোপ ফলো করে, অর্থাৎ, যেই {} ব্লকের ভিতরে এগুলো ডিক্লেয়ার করা হয়, শুধু সেই ব্লকের মধ্যেই এগুলোর অ্যাক্সেস থাকে। let এবং const re-declar করা যায় । var এবং let এ পুনরায় মান দেওয়া যায়।
 
-1) Category Loading 
-Load Tree Categories dynamically on the left side.
+2. forEach() প্রতিটি উপাদারেন উপর একটি ফাংশন চালায় । কিন্তু কিছুই রিটার্ন করে না । আর map() প্রতিটি উপাদানের উপর একটি ফাংশন চালিয়ে নতুন একটি অ্যারে তৈরি করে । এটি রিটার্ন করে প্রতিটি নতুন অ্যারে ভ্যালু। filter() প্রতিটি উপাদানে একটি শর্ত প্রয়োগ করে, যেগুলো শর্ত পূরন করে সেগুলো দিয়ে একটি নতুন অ্যারে তৈরি করে। এটি রিটার্ন করে শুধুমাত্র সেই উপাদানগুলোর যেগুলো শর্ত পূরণ করে।
 
-2) Category Click → Tree Data 
-On clicking a category: load trees of that category.
+3. arrow functions হলো ES6 একটি ফাংশন লেখার একটি নতুন এবং সংক্ষিপ্ত পদ্ধতি । এটির মূল উদ্দেশ্য হলো ফাংশন তৈরি প্রক্রিয়াকে সহজ ও কার্যকরী করা। single line function এ return করা লাগেনা । double line হলে {} কার্লি ব্রেসেস দিয়ে return করতে হয় । 
 
-Display in a 3-column card layout.
-
-3) Card Contents 
- Each card includes:
-
-        - Image
-
-        -  Name
-
-        - Short description
-
-        - Category
-
-        - Price
-
-        - Add to Cart button
-
-4) Modal on Card Click 
-Clicking a tree name on a card opens a modal with full tree details.
+4. ES6 এর destructuring assignment হলো একটি পদ্ধতি যা অ্যারে বা object থেকে ডেটা বের করে আলাদা ভেরিয়েবলে রাখার প্রক্রিয়াকে অনেক সহজ করে দেয়। এটি কোডকে আরও সংক্ষিপ্ত এবং পঠনযোগ্য করে তোলে। এটির মাধ্যমে অনেক লাইনের কোড এক লাইনে লেখা যায়, এবং এটি আধুনিক javascript।
 
 
-##  🧪 Challenges 
-
-
-    1) Add to Cart 
-    Clicking Add to Cart: - Adds the tree to Cart List
-                          - Shows tree name 
-
-    2) Total Calculation 
-    Calculate total price of trees in cart.
-
-    3) Remove from Cart 
-    Clicking ❌ removes tree and deducts price from total.
-
-    4) Loading Spinner
-    Show spinner while data is loading.
-
-    5) Active Button State 
-    Highlight active category button when selected.
-
-
-
-🧰 Technology Stack:
-        
-        HTML
-
-        CSS (Vanilla / Tailwind / DaisyUI)
-
-        JavaScript (Vanilla only, no frameworks)
-
-📌 Rules
-✅ At least 5 meaningful commits
-
-❌ No dummy text or Lorem Ipsum — must use relevant content
-
-
-
-
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
-
----
+5. template literals হলো ES6 এর স্ট্রিং তৈরির একটি নতুন এবং উন্নত পদ্ধতি। এটি (``) দিয়ে আবদ্ধ থাকে। এটি Multi-line String লেখার জন্য ব্যবহার করা হয়। স্ট্রিং এর মধ্যে ভেরিয়েবল বা এক্সপ্রেশন যোগ করার সুবিধা দেয়।  টেমপ্লেট লিটারাল শুধু একটি ব্যাকটিক দিয়ে শুরু ও শেষ হয় এবং এর মধ্যে ভেরিয়েবলগুলো ${} এর মধ্যে থাকে, যা কোডকে অনেক পরিষ্কার করে। মাল্টি-লাইন স্ট্রিং তৈরি করতে \n ব্যবহার করতে হয়, যা দেখতে অসুবিধাজনক। টেমপ্লেট লিটারাল ব্যবহার করে সরাসরি কোডে এন্টার চাপলেই নতুন লাইন তৈরি হয়।
